@@ -362,6 +362,7 @@ export class Injector {
     const selfParams = this.reflectSelfParams<T>(type);
 
     selfParams.forEach(({ index, param }) => (paramtypes[index] = param));
+    // console.log(paramtypes);
     return paramtypes;
   }
 
