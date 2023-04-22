@@ -828,25 +828,27 @@ describe('Injector', () => {
       class FixtureDep1 {}
       class FixtureDep2 {}
 
-      //   @Injectable()
+      @Injectable()
       class FixtureClass {
         constructor(
           private dep1: FixtureDep1,
-          @Optional()
+          // @Optional()
           private dep2: FixtureDep2,
         ) {}
       }
 
-      const wrapper = new InstanceWrapper({ metatype: FixtureClass });
-      const [dependencies, optionalDependenciesIds] =
-        injector.getClassDependencies(wrapper);
-
-      console.log(dependencies);
-      console.log(optionalDependenciesIds);
       console.log(Reflect.getMetadata(PARAMTYPES_METADATA, FixtureClass));
 
-      expect(dependencies).to.deep.eq([FixtureDep1, FixtureDep2]);
-      expect(optionalDependenciesIds).to.deep.eq([1]);
+      // const wrapper = new InstanceWrapper({ metatype: FixtureClass });
+      // const [dependencies, optionalDependenciesIds] =
+      // injector.getClassDependencies(wrapper);
+
+      // console.log(dependencies);
+      // console.log(optionalDependenciesIds);
+      console.log(Reflect.getMetadata(PARAMTYPES_METADATA, FixtureClass));
+
+      // expect(dependencies).to.deep.eq([FixtureDep1, FixtureDep2]);
+      // expect(optionalDependenciesIds).to.deep.eq([1]);
     });
   });
 

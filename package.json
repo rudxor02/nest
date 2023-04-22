@@ -15,6 +15,7 @@
   "author": "Kamil Mysliwiec",
   "scripts": {
     "build": "tsc -b -v packages",
+    "start": "mocha injector.spec.ts",
     "postbuild": "npm run move:node_modules",
     "build:dev": "tsc -b -v packages --watch",
     "prebuild:prod": "npm run clean",

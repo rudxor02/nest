@@ -32,7 +32,8 @@
   },
   "include": [
     "src/**/*",
-    "e2e/**/*"
+    "e2e/**/*",
+    "../../injector.spec.ts"
   ],
   "exclude": [
     "node_modules",
